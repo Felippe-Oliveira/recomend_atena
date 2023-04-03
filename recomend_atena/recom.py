@@ -19,7 +19,6 @@ with col3:
 st.markdown('Este é um sistema de recomendação construído exclusivamente para o uso da empresa Atena.Ai\n\nO objetivo desse sistema visa realizar o teste do sistema na seguinte ordem:')
 st.markdown('1° - Verificar os produtos contidos no arquivo csv ou txt e separa-los.\n\n2° - O sistema realiza a análise dos produtos e verifica quais seus vizinhos em vendas, com base nisso, definindo quais as melhores recomendações.\n\n3° - Coleta as recomendações com base na quantidade selecionada pelo usuário, oferecendo posteriormente a opção de baixar os produtos recomendados em csv.')
 st.write('\n\n')
-st.success('Váriaveis importantes: "product" e "cart"')
 
 data = st.file_uploader('Suba seus dados em csv: ')
 if data:
@@ -69,7 +68,6 @@ if data:
 
 
 else:
-    st.markdown('As variáveis que são reconhecidas para o sistema de recomendação são: **product e cart**')
-    st.write('é importante que possuam esses nomes.')
+    st.write('Mande seus dados com as seguintes variáveis apenas: product e cart')
 
 st.write('by: Felippe Oliveira - Aluno de DATA SCIENCE pela DNC')
