@@ -34,6 +34,7 @@ if data:
     selected_product = st.selectbox("Selecione o produto que deseja recomendações:",product_list)
     num_recomend = st.selectbox('Quantas recomendações deseja?', np.arange(1,11))
 
+    st.markdown(f'_Aqui estão as **{num_recomend}** recomendações ideais para esse produto:')
 
     G = nx.Graph()
     G.add_nodes_from(df_model['product'].unique(), node_type='item')
