@@ -34,9 +34,9 @@ if data:
     selected_product = st.selectbox("Selecione o produto que deseja recomendações:",product_list)
     num_recomend = st.selectbox('Quantas recomendações deseja?', np.arange(1,11))
     if num_recomend == 1:
-        rec = st.markdown(f'esta, {num_recomend} recomendação')
+        rec = f'esta, {num_recomend} recomendação'
     else:
-        rec = st.markdown(f'estão as {num_recomend} recomendações')
+        rec = f'estão as {num_recomend} recomendações'
 
     st.markdown(f'_Aqui **{rec}** que tem maior chance de sair com o produto escolhido:_')
 
