@@ -25,6 +25,7 @@ if data:
     df_model = pd.read_csv(data,sep="\t|;",header=0,engine='python',dtype=str)
     #tratamento:
     df_model.drop_duplicates(inplace = True)
+    df_model.fillna("Desconhecido - valor (NaN), possível produto não registrado corretamente.")
     df_model = df_model[['product','cart']]
     df_model['peso'] = 1
 
