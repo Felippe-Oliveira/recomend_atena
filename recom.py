@@ -26,6 +26,7 @@ if data:
     df_model = pd.read_csv(data,sep="\t|;",header=0,engine='python',dtype=str)
     #tratamento:
     df_model.drop_duplicates(inplace = True)
+    df_model.fillna("Desconhecido - valor (NaN), possível produto não registrado corretamente.")
     df_model = df_model[['product','cart']]
     df_model['peso'] = 1
 
@@ -36,7 +37,7 @@ if data:
     if num_recomend == 1:
         rec = f'esta, {num_recomend} recomendação'
     else:
-        rec = f'estão as {num_recomend} recomendações'
+        rec = f'estão as {num_recomend} ou o máximo de recomendações'
 
     st.markdown(f'_Aqui **{rec}** que tem maior chance de sair com o produto escolhido:_')
 
